@@ -9,28 +9,28 @@ class Node:
 class CircularBufferLinkedList:
 
     def __init__(self):
-        self.head = None
-        self.tail = None
-        self.size = 0
+        self.__head = None
+        self.__tail = None
+        self.__size = 0
 
     def __is_empty(self):
-        return self.size == 0
+        return self.__size == 0
 
     def append(self, item):
         new_node = Node(item)
         if self.__is_empty():
-            self.head = new_node
+            self.__head = new_node
         else:
-            self.tail.next = new_node
-        self.tail = new_node
-        self.size += 1
+            self.__tail.next = new_node
+        self.__tail = new_node
+        self.__size += 1
 
     def get(self):
         if self.__is_empty():
             raise Exception("Queue is empty!")
-        item = self.head.data
-        self.head = self.head.next
-        self.size -= 1
+        item = self.__head.data
+        self.__head = self.__head.next
+        self.__size -= 1
         return item
 
 
