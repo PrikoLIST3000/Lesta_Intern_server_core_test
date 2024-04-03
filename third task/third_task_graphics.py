@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 
 
-def quick_ins_sort(arr):
+def quick_ins_sort(arr: list) -> list:
     if len(arr) <= 1:
         return arr
     if len(arr) <= 10:  # Порог для перехода к сортировке вставками
@@ -15,7 +15,7 @@ def quick_ins_sort(arr):
     return quick_sort(left) + middle + quick_sort(right)
 
 
-def quick_sort(arr):
+def quick_sort(arr: list) -> list:
     if len(arr) <= 1:
         return arr
     pivot = random.choice(arr)
@@ -25,7 +25,7 @@ def quick_sort(arr):
     return quick_sort(left) + middle + quick_sort(right)
 
 
-def insertion_sort(arr):
+def insertion_sort(arr: list) -> list:
     for i in range(1, len(arr)):
         key = arr[i]
         j = i - 1
