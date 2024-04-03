@@ -1,7 +1,7 @@
 
 
 class CircularBufferList:
-    def __init__(self, capacity):
+    def __init__(self, capacity: int):
         self.__capacity = capacity
         self.__buffer = [None] * capacity
         self.__head = 0
